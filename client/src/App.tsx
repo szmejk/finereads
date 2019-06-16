@@ -2,18 +2,16 @@ import * as React from 'react'
 import { GlobalStyle } from './styles/global'
 import { Provider } from 'react-redux'
 import initStore from './store'
-import Login from './screens/Login'
-import Books from './screens/Books'
+import Navigator from './screens/Navigator'
 
 const store = initStore()
 
 const App = () => (
   <>
     <Provider store={store}>
-        <GlobalStyle />
-        <Books/>
+      <GlobalStyle />
+      <Navigator />
     </Provider>
-    
   </>
 )
 

@@ -26,10 +26,13 @@ const basicModalStyle = {
 
 type OuterProps = {
   isOpen: boolean
+  values?: IBook
   hideModal: () => void
+  title: string
+  onSubmit: (values: IBook) => void
 }
 
-const Modal: React.FC<OuterProps> = ({ isOpen, hideModal }) => (
+const Modal: React.FC<OuterProps> = ({ values, isOpen, hideModal, title, onSubmit }) => (
   <ReactModal
     ariaHideApp={false}
     isOpen={isOpen}
@@ -39,8 +42,8 @@ const Modal: React.FC<OuterProps> = ({ isOpen, hideModal }) => (
       <ButtonSection>
         <CardButton onClick={hideModal}>Close</CardButton>
       </ButtonSection>
-      <ModalTitle>Add a new book!</ModalTitle>
-      <BookForm></BookForm>
+      <ModalTitle>{title}</ModalTitle>
+      <BookForm onSubmit={onSubmit} values={values}></BookForm>
     </Container>
   </ReactModal>
 )

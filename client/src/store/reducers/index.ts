@@ -3,6 +3,6 @@ import UserReducer from './partialReducers/UserReducer'
 import BooksReducer from './partialReducers/BooksReducer'
 
 export default combineReducers({
-  User: UserReducer,
-  Books: BooksReducer,
+  user: UserReducer,
+  books: BooksReducer,
 })

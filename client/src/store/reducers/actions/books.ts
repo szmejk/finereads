@@ -33,7 +33,7 @@ export const getBooksRequest: (username: string) => IAction<string> = username =
 })
 
 export const getBooksFinish: (books: BooksState) => IAction<BooksState> = books => ({
-  type: ACTION_BOOK.GET.REQUEST,
+  type: ACTION_BOOK.GET.FINISH,
   payload: books,
 })
 
@@ -43,7 +43,7 @@ export const editBookRequest: (book: IBook) => IAction<IBook> = book => ({
 })
 
 export const editBookFinish: (book: IBook) => IAction<IBook> = book => ({
-  type: ACTION_BOOK.EDIT.REQUEST,
+  type: ACTION_BOOK.EDIT.FINISH,
   payload: book,
 })
 

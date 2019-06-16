@@ -1,8 +1,12 @@
 import * as React from 'react'
-import { CtaText, Input} from './styles'
+import { CtaText, Input } from './styles'
 import { BasicButton } from '../../styles/buttons'
 
-const LoginForm: React.FC = () => {
+type Props = {
+  addUser: (user: IUser) => void
+}
+
+const LoginForm: React.FC<Props> = ({ addUser }) => {
   const [username, setUsername] = React.useState('')
 
   return (
@@ -11,7 +15,7 @@ const LoginForm: React.FC = () => {
       <Input value={username} onChange={e => setUsername(e.target.value)} />
       <BasicButton
         disabled={username.trim().length <= 0}
-        onClick={() => console.log('Current username', username)}>
+        onClick={() => addUser({ id: 'test', username })}>
         LOGIN
       </BasicButton>
     </>

@@ -8,15 +8,6 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(express.static(path.resolve(__dirname, '../client/dist')))
 
-//TODO do wywalenia
-app.get('/users', (req: express.Request, res: express.Response) => {
-    res.json(Store.getUsers())
-})
-
-app.get('/books', (req: express.Request, res: express.Response) => {
-    res.json(Store.getBooks())
-})
- //TODO-----------------------
 
 app.post('/users', (req: express.Request, res: express.Response) => {
     const username = req.body.username

@@ -11,6 +11,6 @@ export const addUserRequest: (username: string) => IAction<{ username: string }>
 })
 
 export const addUserFinish: (user: IUser) => IAction<IUser> = user => ({
-  type: ACTION_USER.ADD.REQUEST,
+  type: ACTION_USER.ADD.FINISH,
   payload: user,
 })

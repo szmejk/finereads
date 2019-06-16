@@ -45,17 +45,7 @@ export namespace Store {
             return getUserId(username)
         }
     }
-
-    //TODO do wywalenia
-    export const getUsers = () => {
-        return users
-    }
-
-    export const getBooks = () => {
-        return books
-    }
-    //TODO-----------------------
-
+    
     export const getUsersBooks = (id: string) => {
        return Object.keys(books)
         .map(key => books[key])
