@@ -20,16 +20,17 @@ const initialValues = {
   rating: 1,
 }
 
+
 const BookForm: React.FC = () => (
   <Formik
     initialValues={initialValues}
     onSubmit={() => console.log('submitted')}
     validationSchema={object().shape({
-      title: string().required(),
-      author: string().required(),
+      title: string().trim().min(1).required(),
+      author: string().trim().min(1).required(),
       isbn: string()
         .required()
-        .test('valid-isbn', 'Invalid isbn', function(value) {
+        .test('valid-isbn', 'Invalid ISBN', function(value) {
           return isISBN(value, 10) || isISBN(value, 13)
         }),
       numberOfPages: number()

@@ -30,17 +30,17 @@ type OuterProps = {
 }
 
 const Modal: React.FC<OuterProps> = ({ isOpen, hideModal }) => (
-  <ReactModal ariaHideApp={false} isOpen={isOpen} onRequestClose={hideModal} style={basicModalStyle}>
+  <ReactModal
+    ariaHideApp={false}
+    isOpen={isOpen}
+    onRequestClose={hideModal}
+    style={basicModalStyle}>
     <Container>
       <ButtonSection>
         <CardButton onClick={hideModal}>Close</CardButton>
       </ButtonSection>
-      <ModalTitle>
-          Add a new book!
-      </ModalTitle>
-      <BookForm>
-
-      </BookForm>
+      <ModalTitle>Add a new book!</ModalTitle>
+      <BookForm></BookForm>
     </Container>
   </ReactModal>
 )
