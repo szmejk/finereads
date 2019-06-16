@@ -15,9 +15,15 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'awesome-typescript-loader'
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
             }
         ]
     },
+   
+    
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html'

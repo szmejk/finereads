@@ -1,8 +1,15 @@
 import * as React from 'react'
+import { GlobalStyle } from './styles/global'
 
-const App = () => 
-    <div>
-        <h1> Welcome to Finereadsss </h1>
-    </div>
+
+import Login from './screens/Login'
+import Books from './screens/Books'
+
+const App = () => (
+  <>
+    <GlobalStyle />
+    <Books/>
+  </>
+)
 
 export default App

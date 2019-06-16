@@ -1,0 +1,21 @@
+{
+    "rulesDirectory": ["tslint-plugin-prettier"],
+    "extends": ["tslint-config-prettier"],
+    "defaultSeverity": "error",
+    "rules": {
+        "no-var-keyword": true,
+        
+        "prettier": [
+            true,
+            {
+                "singleQuote": true,
+                "semi": false,
+                "arrowParens": "avoid",
+                "parser": "typescript",
+                "trailingComma": "es5",
+                "jsxBracketSameLine": true,
+                "printWidth": 100 
+            }
+        ]
+    }
+}
